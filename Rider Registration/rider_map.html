@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Registration</title>
+    <style>
+        .dropdown-container {
+            position: relative;
+            width: 100%;
+        }
+        .dropdown-input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .dropdown-list {
+            position: absolute;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            background-color: white;
+            display: none;
+        }
+        .dropdown-list div {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .dropdown-list div:hover {
+            background-color: #f1f1f1;
+        }
+        ul.suggestions { list-style: none; padding: 0; max-width: 300px; background: #fff; border: 1px solid #ccc; position: absolute; z-index: 1000; }
+        ul.suggestions li { padding: 8px; cursor: pointer; }
+        ul.suggestions li:hover { background: #f0f0f0; }
+        input { width: 300px; padding: 8px; margin: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register as a Rider</h2>
+        <form id="riderForm">
+            <input type="text" id="name" placeholder="Enter your name" required />
+            <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            
+            <!-- Searchable dropdown for car model -->
+            <input type="text" id="carSearch" placeholder="Search car model..." required />
+            <div id="carDropdown" class="dropdown-list"></div>
+        
+            <!-- "Add New Car" button (Hidden initially) -->
+            <button type="button" id="addCarBtn" style="display: none;">Add New Car</button>
+        
+            <!-- Hidden fields for car make & mileage (shown after button click) -->
+            <div id="newCarFields" style="display: none;">
+                <input type="text" id="carMake" placeholder="Enter car make (brand)" />
+                <input type="number" id="carMileage" placeholder="Enter mileage (km/l)" />
+            </div>
+            <div id="searchSection">
+                <input type="hidden" id="fromLat">
+                <input type="hidden" id="fromLon">
+                <input type="hidden" id="toLat">
+                <input type="hidden" id="toLon">
+
+                <input type="text" id="from" placeholder="Enter pickup location">
+                <ul id="fromSuggestions" class="suggestions"></ul>
+            
+                <input type="text" id="to" placeholder="Enter destination">
+                <ul id="toSuggestions" class="suggestions"></ul>
+            </div>
+            <input type="time" id="time" required />
+            
+            <button type="submit">Register</button>
+        </form>
+        
+    </div>
+    
+    <script type="module" src="rider_map.js"></script>
+</body>
+</html>
