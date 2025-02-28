@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride Sharing</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #map { height: 400px; margin-top: 10px; }
-        ul.suggestions { list-style: none; padding: 0; max-width: 300px; background: #fff; border: 1px solid #ccc; position: absolute; z-index: 1000; }
-        ul.suggestions li { padding: 8px; cursor: pointer; }
-        ul.suggestions li:hover { background: #f0f0f0; }
-        input { width: 300px; padding: 8px; margin: 5px; }
-        .hidden { display: none; }
-    </style>
+    <link rel="stylesheet" href="user_map.css">
+    
 </head>
 <body>
-
+    <div class="container">
     <div id="searchSection">
         <input type="text" id="from" placeholder="Enter pickup location">
         <ul id="fromSuggestions" class="suggestions"></ul>
@@ -29,6 +23,7 @@
     <ul id="storedData"></ul>
 
     <div id="map"></div>
+    
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="module" src="user_map.js">
@@ -36,3 +31,4 @@
     
 </body>
 </html>
+

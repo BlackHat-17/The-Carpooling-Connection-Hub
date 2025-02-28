@@ -1,0 +1,186 @@
+.dropdown-container {
+    position: relative;
+    width: 100%;
+}
+.dropdown-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.dropdown-list {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    color:black;
+    border: 1px solid #ccc;
+    background-color: white;
+    display: none;
+}
+.dropdown-list div {
+    padding: 8px;
+    cursor: pointer;
+}
+.dropdown-list div:hover {
+    background-color: #f1f1f1;
+}
+ul.suggestions { list-style: none; padding: 0; max-width: 300px; background: #fff; border: 1px solid #ccc; position: absolute; z-index: 1000; }
+ul.suggestions li { padding: 8px; cursor: pointer;color:black; }
+ul.suggestions li:hover { background: #f0f0f0; }
+input { width: 300px; padding: 8px; margin: 5px; }
+.hidden { display: none; }
+
+.searchSection {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background: white;
+    width: 70%;
+    color:black;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+.suggestions li:hover {
+    background: #f0f0f0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(135deg, #6E8EF4, #A777E3); */
+    background-image: url(images/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #fff;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+    background: #ff8a65;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff7043;
+}
+
+/* Ride Listings */
+#storedData {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+}
+
+#storedData li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+#storedData li:hover {
+    transform: scale(1.05);
+}
+
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.select-btn {
+    width: 100%;
+    padding: 8px;
+    background: #43A047;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select-btn:hover {
+    background: #2E7D32;
+}
+#gender{
+    width: 98%;
+    padding: 8px;
+  color:black;
+    border: none;
+    
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}

@@ -150,7 +150,7 @@ document.getElementById("riderForm").addEventListener("submit", function(event) 
             longitude: parseFloat(document.getElementById("toLon").value)
         },
         time: document.getElementById("time").value,
-        peopleCount: 0
+        peopleCount: 1
     };
 
     const carRef = ref(database, "cars/" + selectedModel);
